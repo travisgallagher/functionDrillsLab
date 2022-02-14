@@ -116,7 +116,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
-expression
+// expression *** this one
 
 
 
@@ -131,7 +131,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-arrow
+// arrow *** this one
 // declaration
 // expression
 
@@ -142,6 +142,8 @@ arrow
   Brownie points if you use a template string
 */
 
+const exclaimThree = str => `${str.toUpperCase()}`; 
+console.log(exclaimThree);
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -156,7 +158,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+// declaration *** this one
 // expression
 
 
@@ -171,6 +173,18 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+function nameCheck(name) {
+  if(name === `Steven`) {
+    return `What is up Steven?`; 
+  } else if (name === `Bryan!`) {
+    return "Hey Bryan!"; 
+  } else {
+    return `Cool name, ${name}`; 
+  }; 
+}; 
+
+let nameGreeting = nameCheck(`Steven`); 
+console.log(nameCheck); 
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -184,9 +198,23 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+function faveColorFinder(color) {
+  if(color === 'red') {
+    return "red is a great color";
+  } else if (color === 'green') {
+    return "green is a solid favorite color";
+  } else if (color === 'black') {
+    return "so trendy"; 
+  } else {
+    return "you need to evaluate your favorite color choice";
+  };
+};
+
+let colorRating = faveColorFinder('red'); 
+console.log(colorRating); 
 
 ////////////////// PROBLEM 12 ////////////////////
-let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
+let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']; 
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
@@ -194,17 +222,42 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printAllNames(names) {
+  for(let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+  };
+}; 
 
+printAllNames(namesArr); 
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
   Using conditional logic, if the number is even, return 'That's not odd!'
   Otherwise, return 'That is odd indeed!'
-  Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
+  Outside the function, create a variable called `oddChecker` and set it equal to your function invoked,
+   making sure to pass in an argument.
 */
 
 //CODE HERE
+
+function thatsOdd(num1) {
+  if(num1 % 2 === 0) {
+    return `That's not odd!`; 
+  } else {
+    return `That is odd indeed!`; 
+  }
+}
+
+let oddChecker = thatsOdd(25); 
+console.log(oddChecker);
+
+
+
+
+
+
+
 
 
 ////////////////// PROBLEM 14 ////////////////////
