@@ -13,6 +13,11 @@
 
 //CODE HERE
 
+function helloWorld () {
+  console.log("Hello world!"); 
+};
+
+helloWorld(); 
 
 ////////////////// PROBLEM 2 ////////////////////
 
@@ -22,6 +27,7 @@
 
 //CODE HERE
 
+const jsNinja = () => `I am a javascript ninja!`; 
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -32,6 +38,10 @@
 
 //CODE HERE
 
+function printName(name) {
+  console.log(name);
+}
+printName(`Travis`);
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -46,6 +56,12 @@
 
 //CODE HERE
 
+function greeting(name) {
+  name = String(name)
+  console.log(`Hello, ${name}`); 
+}; 
+
+greeting(`Travis`); 
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -60,6 +76,13 @@
 
 //CODE HERE
 
+const compareNums = (num1, num2) => {
+  if(num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  };
+} ; 
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -71,6 +94,14 @@
 
 //CODE HERE
 
+function add(num1, num2) {
+  num1 = +num1; 
+  num2 = +num2; 
+  return num1 + num2; 
+}; 
+
+let sum = add(25,100); 
+console.log(sum); 
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -80,12 +111,12 @@
 */
 
 const exclaim = function(str) {
-  return str.toUpperCase() + '!!!'
-}
+  return str.toUpperCase() + '!!!'; 
+}; 
 
 // arrow
 // declaration
-// expression
+expression
 
 
 
@@ -100,7 +131,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+arrow
 // declaration
 // expression
 
