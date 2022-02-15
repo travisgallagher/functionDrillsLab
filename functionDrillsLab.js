@@ -252,14 +252,6 @@ function thatsOdd(num1) {
 let oddChecker = thatsOdd(25); 
 console.log(oddChecker);
 
-
-
-
-
-
-
-
-
 ////////////////// PROBLEM 14 ////////////////////
 
 /*
@@ -272,6 +264,10 @@ console.log(oddChecker);
 
 //CODE HERE
 
+const bestMovie = title => `${title} is the best movie ever!`; 
+
+let movie = bestMovie(`Harry Potter`); 
+console.log(movie); 
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -286,26 +282,62 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
+function bigOrSmall(arr) {
+  let answers = []; 
+
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > 100) {
+      answers.push(`big`); 
+    } else {
+      answers.push(`small`); 
+    }
+  }
+  return answers; 
+}; 
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray); 
+console.log(arrayEvaluator); 
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
 /*
-  Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
-  The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
+  Write a function that is called theEliminator, which takes in two arguments, contestants 
+  (which will each be an array of strings), and loser (which will be a string).
+  The function should loop over the array of contestant names. 
+  If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
 //CODE HERE
 
+function theEliminator(contestant, loser) {
+  for(let i = 0; i < contestant.length; i++) {
+    if(contestant[i] === loser) {
+      contestant.splice(i, 1);
+    }
+  }
+  return contestant;
+};
+
+let newContestants = theEliminator(contestants, loser);
+console.log(newContestants);
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
-  Write a function that takes in one argument, a string. The function should then console.log that string, in entirely uppercase characters.
+  Write a function that takes in one argument, a string.
+   The function should then console.log that string, in entirely uppercase characters.
   Invoke the function, passing in the sampleString (above).
 */
 
 //CODE HERE
+
+function fname(str) {
+  console.log(str.toUpperCase()); 
+}; 
+
+fname(sampleString); 
+console.log(fname); 
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -319,6 +351,16 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck(email) {
+  email = String(email).trim();
+
+  if (email.includes('@')) {
+    return 'email verified';
+  } else {
+    return 'must provide a valid email address';
+  };
+}; 
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -326,6 +368,17 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
+
+
+
+
+
+
+
+
+
+
 
 
 ////////////////// PROBLEM 20 ////////////////////
